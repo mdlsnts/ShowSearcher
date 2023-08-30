@@ -2,10 +2,10 @@ const form = document.querySelector("#searchForm");
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
   const searchShow = form.elements.query.value;
-  const result = await axios.get(
-    `https://api.tvmaze.com/search/shows?q=${searchShow}`
-  );
+  const config = { params: { q: searchShow } };
+  const result = await axios.get(`https://api.tvmaze.com/search/shows`, config);
   addImage(result.data);
+  form.elements.query.value = "";
 });
 
 const addImage = (shows) => {

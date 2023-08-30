@@ -4,19 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Show Searcher</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <h1>TV Show Search</h1>
-    <form id="searchForm">
-      <input
-        type="text"
-        placeholder="TV Show Title"
-        name="query"
-        autocomplete="off"
-      />
-      <button>Search</button>
-    </form>
+    <div class="container">
+      <h1>TV Show Search</h1>
+      <form id="searchForm">
+        <input
+          type="text"
+          placeholder="TV Show Title"
+          name="query"
+          autocomplete="off"
+          class="input is-normal is-info is-rounded"
+        />
+        <button class="button is-info is-rounded">Search</button>
+      </form>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
